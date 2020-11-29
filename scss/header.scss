@@ -1,0 +1,109 @@
+@import "main.scss";
+@mixin resp-header {
+  flex-basis: 50%;
+  @media screen and (max-width: 420px) {
+    flex-basis: 100%;
+  }
+}
+
+.header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+
+  .container {
+    @media screen and (min-width: 420px) {
+      padding: 0;
+    }
+  }
+	&__top {
+    height: 10vh;
+    @include container-resize;
+	}
+
+	&__logo img {
+    width: 160px;
+    @media screen and (max-width: 420px) {
+      width: 130px;
+    }
+    @media screen and (max-width: 320px) {
+      width: 100px;
+    }
+
+	}
+
+	&__button {
+
+	}
+
+	&__menu {
+    margin-left: auto;
+    background: white;
+	}
+
+	&__menu-item {
+    padding-left: 2em;
+    padding-right: 2em;
+	}
+
+	&__link {
+    font-family: 'Sunflower', sans-serif;
+    font-weight: bold;
+    color: #305F6D;
+
+    &:hover {
+      color: #46B4D4;
+      text-decoration: none;
+    }
+	}
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    // height: 90vh;
+    background: url(/img/map.svg) no-repeat;
+    // background-clip: content-box;
+    // background-position-x: 10%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @media screen and (max-width: 420px) {
+      flex-wrap: wrap;
+    }
+    // @include container-resize;
+
+	}
+
+  &__text {
+    padding-left: 1rem;
+    @include resp-header;
+	}
+
+  &__title {
+    padding: 1em 0;
+    @media screen and (max-width: 420px) {
+      margin-top: 1em;
+      margin-bottom: 0;
+    }
+	}
+
+  &__description {
+    @media screen and (min-width: 420px) {
+      max-width: 68%;
+
+    }
+	}
+
+  &__description-link {
+    margin-top: 2em;
+    display: block;
+    color: #46B4D4;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__image {
+    @include resp-header;
+	}
+
+}

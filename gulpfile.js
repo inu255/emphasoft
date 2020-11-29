@@ -1,17 +1,13 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
-const concat = require('gulp-concat');
-const minifyJs = require('gulp-minify');
 const sass = require('gulp-sass');
-const clean = require('gulp-clean');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 
 
 function convertSass(done) {
-  gulp.src('./blocks/**/*.scss')
-    .pipe(concat('index.scss'))
+  gulp.src('./scss/*')
     .pipe(sourcemaps.init())
     .pipe(sass({
       errorLogConsole: true,
@@ -19,27 +15,13 @@ function convertSass(done) {
     }))
     .on('error', console.error.bind(console))
     .pipe(autoprefixer({
+      // browsers: ['last 2 versions'],
       cascade: false
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./css/'))
     .pipe(browserSync.stream())
-
-  done();
-}
-
-function concatJs(done) {
-  gulp.src('./blocks/**/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(concat('index.js'))
-    .pipe(minifyJs())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./'))
-    .pipe(browserSync.stream());
-
-  // gulp.src('./index.js')
-  //   .pipe(clean())
 
   done();
 }
@@ -60,9 +42,9 @@ function browserReload(done) {
 }
 
 function watchAll() {
-  gulp.watch("./blocks/**/*.scss", convertSass);
+  gulp.watch("./scss/*", convertSass);
   gulp.watch("./index.html", browserReload);
-  gulp.watch("./blocks/**/*.js", concatJs);
+  gulp.watch("./index.js", browserReload);
 
 }
 
