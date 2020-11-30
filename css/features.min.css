@@ -1,3 +1,3 @@
-.features{background:linear-gradient(180deg, #F5FBFD -2.67%, rgba(245,251,253,0) 100%)}
+.features{font-family:'Roboto', sans-serif}.features__title{padding-top:4rem;padding-bottom:2rem;width:100%;text-align:center}.features__cards{display:flex;width:100%;flex-wrap:wrap;margin-bottom:3rem}.features__item{text-align:center;flex-basis:25%}@media screen and (max-width: 420px){.features__item{flex-basis:100%}}.features__text{font-family:'Sunflower', sans-serif;font-weight:500;font-size:18px;color:#305F6D;width:60%;margin:1rem auto}
 
 /*# sourceMappingURL=features.min.css.map */

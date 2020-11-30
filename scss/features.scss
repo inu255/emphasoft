@@ -1,31 +1,36 @@
 .features {
-  background: linear-gradient(180deg, #F5FBFD -2.67%, rgba(245, 251, 253, 0) 100%);
-	&__title {
+	font-family: 'Roboto', sans-serif;
 
+
+	&__title {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    text-align: center;
 	}
 
 	&__cards {
-
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		margin-bottom: 3rem;
 	}
 
 	&__item {
-
-	}
-
-	&__icon {
-
+		text-align: center;
+		flex-basis: 25%;
+		@media screen and (max-width: 420px) {
+			flex-basis: 100%;
+		}
 	}
 
 	&__text {
-
+		font-family: 'Sunflower', sans-serif;
+		font-weight: 500;
+		font-size: 18px;
+		color: #305F6D;
+		width: 60%;
+		margin: 1rem auto;
 	}
-
-}
-
-.title {
-
-}
-
-.title--secondary {
 
 }

@@ -1,0 +1,53 @@
+.accordions {
+  background: #F5FBFD;
+  font-family: 'Roboto', sans-serif;
+	&__title {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+	}
+
+	&__subtitle {
+    color: #8CA0A6;
+    font-size: 16px;
+    line-height: 26px;
+    width: 70%;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+	}
+
+  &__content {
+    padding-bottom: 3rem;
+  }
+
+  .card-header {
+    background: transparent;
+    border: none;
+  }
+
+  .card {
+    border: none;
+    border-top: 1px solid #D5DFE3;
+    background: transparent;
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    font-size: 20px;
+    line-height: 38px;
+    color: #305F6D;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &:hover {
+      text-decoration: none;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

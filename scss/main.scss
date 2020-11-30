@@ -10,3 +10,25 @@
     padding-right: 1rem;
   }
 }
+
+.main {
+  background: linear-gradient(180deg, #F5FBFD -2.67%, rgba(245, 251, 253, 0) 100%);
+
+  &__options {
+    padding: 4rem;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 420px) {
+      padding: 1rem;
+    }
+  }
+
+  .options-wrapper {
+    @media screen and (max-width: 420px) {
+      padding: 0;
+    }
+  }
+
+  &__partners {
+    margin-bottom: 3rem;
+  }
+}

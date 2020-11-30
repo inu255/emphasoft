@@ -1,14 +1,18 @@
 .title {
   font-family: 'Sunflower', sans-serif;
   font-size: 42px;
+  color: #305F6D;
   width: fit-content;
-  font-weight: 700;
-
+  font-weight: bold;
   @media screen and (max-width: 321px) {
     font-size: 38px;
   }
 
-  &--main {
-    padding-top: 0;
+  &--secondary {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
+    color: #8CA0A6;
+    font-weight: normal;
+    font-size: 28px;
   }
 }

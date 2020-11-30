@@ -1,0 +1,22 @@
+.footer {
+  background: #485053;
+  padding: 3rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+	&__logo {
+
+	}
+
+	&__links {
+    display: flex;
+	}
+
+	&__social {
+    opacity: 0.3;
+    margin-left: 1rem;
+	}
+
+}

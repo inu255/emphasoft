@@ -1,0 +1,25 @@
+.partners {
+  &__title {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__carousel {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex-basis: 25%;
+    text-align: center;
+    @media screen and (max-width: 800px) {
+      margin-top: 2rem;
+      flex-basis: 50%;
+    }
+    @media screen and (max-width: 420px) {
+      flex-basis: 100%;
+    }
+  }
+}
