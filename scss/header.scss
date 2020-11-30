@@ -15,9 +15,13 @@
     }
   }
 	&__top {
+    position: fixed;
+    background: white;
     height: 10vh;
     padding-left: 15%;
     padding-right: 15%;
+    width: 100%;
+    z-index: 99999999999;
     @media screen and (max-width: 1600px) {
       padding-left: 8%;
       padding-right: 8%;
@@ -40,10 +44,6 @@
     @media screen and (max-width: 320px) {
       width: 100px;
     }
-
-	}
-
-	&__button {
 
 	}
 
@@ -72,7 +72,8 @@
     display: flex;
     align-items: center;
     background: url(../img/map.svg) no-repeat;
-    padding-top: 2rem;
+    padding-top: calc(10vh + 2rem);
+    background-position-y: calc(10vh + 2rem);
     padding-bottom: 2rem;
     @media screen and (max-width: 420px) {
       flex-wrap: wrap;
